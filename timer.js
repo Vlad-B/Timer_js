@@ -21,6 +21,7 @@ class Timer {
 
 	pause = () => {
 		clearInterval(this.interval);
+		durationInput.select();
 	};
 
 	tick = () => {

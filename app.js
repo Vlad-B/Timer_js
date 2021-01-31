@@ -8,6 +8,10 @@ circle.setAttribute('stroke-dasharray', perimeter);
 let duration;
 const timer = new Timer(durationInput, start, pause, {
 	onStart(totalDuration) {
+		if (isNaN(parseFloat(durationInput.value))) {
+			alert("This isn't a number");
+			durationInput.value = 0;
+		}
 		console.log('Timer has started');
 		duration = totalDuration;
 	},
@@ -16,5 +20,6 @@ const timer = new Timer(durationInput, start, pause, {
 	},
 	onComplete() {
 		console.log('Timer is completed');
+		durationInput.select();
 	}
 });
