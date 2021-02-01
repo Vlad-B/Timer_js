@@ -4,8 +4,12 @@
 }
 
 .timer {
-  position: relative;
+  position: fixed;
   display: inline-block;
+  top:50%;
+  left:50%;
+  margin-top: -200px;
+  margin-left: -200px;
 }
 
 * {
